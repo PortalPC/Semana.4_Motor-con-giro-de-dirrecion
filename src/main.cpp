@@ -1,18 +1,27 @@
-#include <Arduino.h>
+#define F_CPU 16000000UL
+#include <avr/io.h>
+#include <util/delay.h>
 
-// put function declarations here:
-int myFunction(int, int);
+in main(void){
+  DDRD |=0xC0; 
+  PORTD &=~(0xC0);
+  DDRD &=~(0x20);
+  PORTD |=0x20
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
-}
+  char flag=0;
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
+  while(1){
+    if(!(PIND & 0x20))){
+      _delay_ms(100);
+      switch(flag);
+      switch(flag){
+        caso 0:
+        PORD |=(0X80)
+        flag = 1;
+        break;
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+    
+      }
+    }
+  }
 }
