@@ -24,7 +24,7 @@ int main(void){
          _delay_ms(50);
          PORTD |= (0x40);
 
-         flag = 2
+         flag = 2;
           break;
         
         case 2:
