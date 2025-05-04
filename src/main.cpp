@@ -6,7 +6,7 @@ int main(void){
   DDRD |=0xC0; 
   PORTD &=~(0xC0);
   DDRD &=~(0x20);
-  PORTD |=0x20
+  PORTD |=0x20;
 
   char flag = 0;
 
@@ -14,23 +14,23 @@ int main(void){
     if(!(PIND & 0x20)){
       _delay_ms(100);
       switch(flag){
-        caso 0:
-        PORD |=(0X80)
-        flag = 1;
-        break;
+        case 0:
+         PORTD |=(0X80);
+         flag = 1;
+         break;
 
         case 1:
-        PORTD &= ~(0xC0);
-        _delay_ms(50);
-        PORTD |= (0x40);
+         PORTD &= ~(0xC0);
+         _delay_ms(50);
+         PORTD |= (0x40);
 
-        flag = 2
-        break;
+         flag = 2
+          break;
         
         case 2:
-        PORTD &=~(0xC0);
-        flag= 0;
-        break;
+         PORTD &= ~(0xC0);
+         flag= 0;
+         break;
       
       }
     }
